@@ -11,7 +11,7 @@ import { SignupComponent } from './signup/signup.component';
 
 const appRoutes: Routes = [
   // { path: '',   redirectTo: '/signup', pathMatch: 'full' },
-  { path: 'heroes', component: HeroesComponent }
+  { path: 'heroes', component: HeroesComponent },
   { path: 'signup', component: SignupComponent },  // TODO
   { path: '**', component: PageNotFoundComponent }
 ]
