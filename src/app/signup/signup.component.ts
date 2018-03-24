@@ -12,7 +12,7 @@ import { UsersService } from '../users/users.service';
 export class SignupComponent implements OnInit {
 
   model = new User("", "", "", "");
-  showSignUp: bool = true;
+  showSignUp: boolean = true;
 
   constructor(private usersService: UsersService) { }
 
