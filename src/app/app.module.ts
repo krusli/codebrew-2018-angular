@@ -9,9 +9,10 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { PageNotFoundComponent } from './not-found.component';
 import { SignupComponent } from './signup/signup.component';
+import { DescriptionComponent } from './description/description.component';
 
 const appRoutes: Routes = [
-  // { path: '',   redirectTo: '/signup', pathMatch: 'full' },
+  { path: '', component: DescriptionComponent },
   { path: 'heroes', component: HeroesComponent },
   { path: 'signup', component: SignupComponent },  // TODO
   { path: '**', component: PageNotFoundComponent }
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     HeroesComponent,
     SignupComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,
