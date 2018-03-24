@@ -1,0 +1,35 @@
+.card{
+    margin: 0 auto;
+}
+
+.card-body{
+    margin: 0 auto;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-img-top {
+    padding: 20px;
+}
+
+.card-text{
+    padding: 5px;
+    text-align: justify;
+}
+
+.badges{
+    text-align:center;
+    margin-bottom: 15px;
+}
+
+.progress {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.card-body{
+    text-align: left;
+}
