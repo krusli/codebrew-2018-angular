@@ -1,0 +1,91 @@
+<html>
+
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:400,700" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <fieldset>
+          <legend>Make your donation</legend>
+          <div class="form-group">
+            <label for="cc-payment" class="control-label mb-1">Payment amount</label>
+            <input id="cc-pament" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false" value="100.00">
+          </div>
+          <div class="form-group">
+            <label for="cc_name">Card Holder's Name</label>
+            <input type="text" class="form-control" id="cc_name" pattern="\w+ \w+.*" title="First and last name" required="required">
+          </div>
+          <div class="form-group row">
+            <label class="col-md-12">Card Number</label>
+            <div class="col-md-3">
+              <input type="text" class="form-control" autocomplete="off" maxlength="4" pattern="\d{4}" title="First four digits" required="">
+            </div>
+            <div class="col-md-3">
+              <input type="text" class="form-control" autocomplete="off" maxlength="4" pattern="\d{4}" title="Second four digits" required="">
+            </div>
+            <div class="col-md-3">
+              <input type="text" class="form-control" autocomplete="off" maxlength="4" pattern="\d{4}" title="Third four digits" required="">
+            </div>
+            <div class="col-md-3">
+              <input type="text" class="form-control" autocomplete="off" maxlength="4" pattern="\d{4}" title="Fourth four digits" required="">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-12">Card Expiry Date</label>
+            <div class="col-md-9">
+              <select class="form-control" name="cc_exp_mo">
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <select class="form-control" name="cc_exp_yr">
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-12">Card CVV</label>
+            <div class="col-md-3">
+              <input type="text" class="form-control" autocomplete="off" maxlength="3" pattern="\d{3}" title="Three digits at back of your card" required="">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12 text-xs-right">
+              <button type="button" class="btn btn-default">Cancel</button>
+              <button type="submit" class="btn btn-primary">Donate now!</button>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
