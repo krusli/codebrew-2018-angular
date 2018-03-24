@@ -1,5 +1,8 @@
-<div class="container">
+<div class="row"> <!-- add some separation at the top -->
+  <p></p>
+</div>
 
+<div class="container">
   <!-- TODO remove this {{model.firstName}} {{model.lastName}} {{model.username}} {{model.email}} -->
   <!-- showSignUp: {{showSignUp}} -->
 
@@ -60,7 +63,7 @@
   <div class="row" *ngIf=!showSignUp>
       <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 col-centered">
         <form role="form">
-        <h2>Sign Up</h2>
+        <h2>Login</h2>
         <p><a (click)="switchToSignIn()" href="javascript:void(0)">Don't have an account? Click here to sign up.</a></p>
         <hr class="colorgraph">
         <div class="form-group">

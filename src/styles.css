@@ -1,1 +1,6 @@
 /* Global styles go here */
+
+/* Fix navbar auto close bug */
+.navbar-collapse.collapse.in {
+  display: block!important;
+}
