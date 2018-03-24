@@ -12,6 +12,7 @@ import { UsersService } from '../users/users.service';
 export class SignupComponent implements OnInit {
 
   model = new User("", "", "", "");
+  showSignUp: bool = true;
 
   constructor(private usersService: UsersService) { }
 
@@ -24,6 +25,15 @@ export class SignupComponent implements OnInit {
       .subscribe(user => {
         this.model = new User("", "", "", ""); // TODO remove. Clears the form
       })
+  }
+
+  switchToSignIn() {
+    this.showSignUp = !this.showSignUp;
+  }
+
+  signIn() {
+    // TODO STUB
+    console.log('signIn()');
   }
 
 }
