@@ -33,3 +33,11 @@
 .card-body{
     text-align: left;
 }
+
+
+table {
+    display: block;
+    overflow-x: auto;
+    /* white-space: nowrap; */
+    border: none;
+}
