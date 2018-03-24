@@ -10,6 +10,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { PageNotFoundComponent } from './not-found.component';
 import { SignupComponent } from './signup/signup.component';
 import { DescriptionComponent } from './description/description.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   { path: '', component: DescriptionComponent },
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
     HeroesComponent,
     SignupComponent,
     PageNotFoundComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
