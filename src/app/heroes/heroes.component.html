@@ -1,0 +1,10 @@
+<p>
+  {{hero.id}}: {{hero.name}}
+</p>
+
+<!-- {{users ? users.length : "users is null"}} -->
+
+<div *ngFor="let user of users">
+  <p>First Name: {{user.firstName}}</p>
+  <p>Last Name: {{user.lastName}}</p>
+</div>
