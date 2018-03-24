@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from './Hero';
 
-// TODO
-import { User, UsersService } from '../users/users.service';
+import { User } from '../users/User'; // TODO REMOVE
+import { UsersService } from '../users/users.service';
 
 @Component({
   selector: 'app-heroes',

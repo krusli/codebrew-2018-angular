@@ -1,27 +1,35 @@
 <div class="container">
 
-  <div class="row">
+  <!-- TODO remove this {{model.firstName}} {{model.lastName}} {{model.username}} {{model.email}} -->
+  <!-- showSignUp: {{showSignUp}} -->
+
+  <div class="row" *ngIf=showSignUp>
       <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 col-centered">
         <form role="form">
         <h2>Sign Up</h2>
+        <p><a (click)="switchToSignIn()" href="javascript:void(0)">Have an account? Click here to sign in.</a></p>
         <hr class="colorgraph">
         <div class="row">
           <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
-                          <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+              <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1"
+              [(ngModel)]="model.firstName">
             </div>
           </div>
           <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
-              <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+              <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2"
+              [(ngModel)]="model.lastName">
             </div>
           </div>
         </div>
         <div class="form-group">
-          <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+          <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3"
+          [(ngModel)]="model.username">
         </div>
         <div class="form-group">
-          <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+          <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4"
+          [(ngModel)]="model.email">
         </div>
         <div class="row">
           <div class="col-xs-6 col-sm-6 col-md-6">
@@ -39,12 +47,42 @@
 
         <hr class="colorgraph">
         <div class="row">
-          <div class="col-xs-6 col-md-6"><input type="button" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
-          <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>
+          <div class="col-xs-4 col-md-4"></div>
+          <div class="col-xs-4 col-md-4"><input type="button" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"
+            (click)="newUser()"></div>
+          <div class="col-xs-4 col-md-4"></div>
+          <!-- <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div> -->
         </div>
       </form>
     </div>
   </div>
+
+  <div class="row" *ngIf=!showSignUp>
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 col-centered">
+        <form role="form">
+        <h2>Sign Up</h2>
+        <p><a (click)="switchToSignIn()" href="javascript:void(0)">Don't have an account? Click here to sign up.</a></p>
+        <hr class="colorgraph">
+        <div class="form-group">
+          <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4"
+          [(ngModel)]="model.email">
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+        </div>
+
+        <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-4 col-md-4"></div>
+          <div class="col-xs-4 col-md-4"><input type="button" value="Sign In" class="btn btn-primary btn-block btn-lg" tabindex="7"
+            (click)="signIn()"></div>
+          <div class="col-xs-4 col-md-4"></div>
+          <!-- <div class="col-xs-6 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div> -->
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- Modal -->
   <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
