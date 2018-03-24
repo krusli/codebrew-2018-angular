@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse } from '@angular/common/http';
+// import { RequestOptions } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
@@ -11,6 +12,19 @@ import { catchError, retry } from 'rxjs/operators';
 // }
 
 import { User } from './User';
+
+// class LoginObject {
+//   constructor(email: string, password: string) {
+//     this.email = email;
+//     this.password = password;
+//   }
+//   email: string;
+//   password: string;
+// }
+
+class LoginToken {
+  id: string
+}
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -31,6 +45,27 @@ export class UsersService {
       retry(3), // retry 3 times
       catchError(this.handleError)
     )
+  }
+
+  signIn(email: string, password: string) {
+    // var object = new LoginObject(email, password);
+
+    // let myHeaders = new Headers();
+    // myHeaders.set('Content-Type', 'application/json');
+    // myHeaders.set('Accept', 'text/plain');
+    // let myParams = new URLSearchParams();
+    // myParams.set('email', email);
+    // // myParams.set('writer', wtr);
+    // let options = new RequestOptions({ headers: myHeaders, params: myParams });
+
+    return this.http.get<string>(this.url + '/login', {
+      params: {
+        email: email
+      }
+    })
+    .pipe(
+      catchError(this.handleError)
+    );
   }
 
   newUser(user: User) {

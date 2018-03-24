@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../users/User';
 import { UsersService } from '../users/users.service';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -14,7 +16,7 @@ export class SignupComponent implements OnInit {
   model = new User("", "", "", "");
   showSignUp: boolean = true;
 
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -32,8 +34,17 @@ export class SignupComponent implements OnInit {
   }
 
   signIn() {
-    // TODO STUB
-    console.log('signIn()');
+    if (this.model.email) {
+      this.usersService.signIn(this.model.email, "")
+      .subscribe(obj => {
+        console.log(obj.id);
+
+        this.router.navigate(['./']);
+
+      });  // TODO no password
+      // console.log('signIn()');
+    }
+
   }
 
 }

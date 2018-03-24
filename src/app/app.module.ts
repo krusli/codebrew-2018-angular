@@ -13,7 +13,7 @@ import { DescriptionComponent } from './description/description.component';
 import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  { path: '', component: DescriptionComponent },
+  { path: '', component: HomeComponent },
   { path: 'heroes', component: HeroesComponent },
   { path: 'signup', component: SignupComponent },  // TODO
   { path: '**', component: PageNotFoundComponent }
