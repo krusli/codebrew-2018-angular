@@ -50,12 +50,13 @@ export class CardsComponent implements OnInit {
       "countrytags": ["sri lanka"]
   },
   {
-      "name": "Volunteer at repairing Ayutthaya temple",
+      "name": "Chiang Mai Orphanage Volunteer Project",
       "location": "Thailand",
-      "description": "",
-      "sponsor": "",
+      "description": "Friends for Asia (FFA) sends volunteers to a variety of project sites around Thailand. One of the most rewarding projects that we have is based in rural areas.",
+      "sponsor": "Friends for Asia",
       "tags": ["community", "volunteer"],
-      "countrytags": ["thailand"]
+      "countrytags": ["thailand"],
+      "photo": "orphanage.jpg"
   }];
 
 
