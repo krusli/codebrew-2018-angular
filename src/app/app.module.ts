@@ -13,11 +13,14 @@ import { DescriptionComponent } from './description/description.component';
 import { HomeComponent } from './home/home.component';
 
 import { DataService } from './signup/signupdata.service';
+import { CardsComponent } from './cards/cards.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'heroes', component: HeroesComponent },
   { path: 'signup', component: SignupComponent },  // TODO
+  { path: 'projects', component: CardsComponent },
+  { path: 'projects/1', component: DescriptionComponent },
   { path: '**', component: PageNotFoundComponent }
 ]
 
@@ -28,7 +31,8 @@ const appRoutes: Routes = [
     SignupComponent,
     PageNotFoundComponent,
     DescriptionComponent,
-    HomeComponent
+    HomeComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
