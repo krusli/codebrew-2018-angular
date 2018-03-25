@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { DataService } from './signup/signupdata.service';
 import { User } from './users/User';
 
@@ -10,7 +9,7 @@ import { User } from './users/User';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
-  data: User = {};
+  data: any = new User("", "", "", ""); // TODO any
 
   constructor(private dataService: DataService) {}
 
