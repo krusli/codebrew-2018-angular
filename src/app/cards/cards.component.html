@@ -2,7 +2,8 @@
   <tr>
     <td *ngFor="let project of projects">
       <div class="card" style="width: 25rem;" >
-          <div class="card-img-top center-cropped" [style.background-image]="'assets/' + project.photo"></div>
+          <div class="card-img-top center-cropped"
+            [style.background-image]="'url(assets/' + project.photo + ')'"></div>
           <div class="card-body">
             <h5 class="card-title">{{project.name}} <br> ({{project.location}})</h5>
             <p class="card-text">{{project.description}}</p>
