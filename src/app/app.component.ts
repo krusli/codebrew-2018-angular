@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { DataService } from './signup/signupdata.service';
 import { User } from './users/User';
 
+import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,7 +14,8 @@ export class AppComponent {
   title = 'Tour of Heroes';
   data: any = new User("", "", "", ""); // TODO any
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService,
+    private router: Router) {}
 
   ngOnInit() {
     this.dataService.getData().subscribe(data => {
