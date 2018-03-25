@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td *ngFor="let project of projects">
+      <div class="card" style="width: 25rem;" >
+          <img class="card-img-top" [src]="'assets/' + project.photo">
+          <div class="card-body">
+            <h5 class="card-title">{{project.name}} <br> ({{project.location}})</h5>
+            <p class="card-text">{{project.description}}</p>
+          </div>
+
+          <div class="card-body">
+            <a routerLink="/projects/1" routerLinkActive="active" class="card-link">Learn more and help out</a>
+          </div>
+
+          <hr>
+
+          <div class="badges">
+              <span class="badge badge-pill badge-info">volunteer</span>
+              <span class="badge badge-pill badge-success">teaching</span>
+              <span class="badge badge-secondary">asian</span>
+              <span class="badge badge-secondary">phillipines</span>
+          </div>
+      </div>
+    </td>
+  </tr>
+</table>
