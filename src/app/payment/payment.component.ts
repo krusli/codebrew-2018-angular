@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-payment',
@@ -7,7 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentComponent implements OnInit {
 
-  constructor() { }
+  donateAmount = 0;
+
+  setDonateAmount(amt) {
+    this.donateAmount = amt;
+  }
+
+  isInvalidDonateAmount() {
+    // return isNaN(parseFloat(this.donateAmount));
+    return true;
+  }
+
+  donate() {
+      this.router.navigate(['./projects/1/thanks']
+  }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
