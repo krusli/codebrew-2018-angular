@@ -1,0 +1,32 @@
+.my-font {
+  font-family: "Montserrat"
+}
+
+/* .navbar {
+  font-family: "Karla"
+} */
+
+.navbar{
+  background-color: #eae7dc!important;
+  font-family: "Karla";
+  font-size: 24px;
+  color: #8e8d8a;
+}
+
+.navbar-brand{
+  font-family: "Karla";
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.navbar-brand{
+  font-family: "Karla";
+  font-weight: bold;
+  font-size: 36px;
+}
+
+
+#logo{
+  height: 50px;
+  width: 50px;
+}

@@ -26,7 +26,7 @@ const appRoutes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'projects', component: CardsComponent },
   { path: 'projects/1', component: DescriptionComponent },
-  { path: 'projects/:projectID/payment', component: PaymentComponent },
+  { path: 'projects/:projectID/donate', component: PaymentComponent },
   { path: '**', component: PageNotFoundComponent }
 ]
 
