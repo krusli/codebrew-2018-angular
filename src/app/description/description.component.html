@@ -7,6 +7,13 @@
 <!-- Page Content -->
 <div class="container">
 
+  <div *ngIf="showThanks">
+  <br>
+    <div class="alert alert-info" role="alert">
+      Thanks a lot for donating!
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-sm-8">
       <h2 class="mt-4">What We Do</h2>
@@ -37,7 +44,7 @@
 
       <p>
         <br>
-        <a class="btn btn-primary btn-lg" href="#">Click here to help us &raquo;</a>
+        <a class="btn btn-primary btn-lg" routerLink="/projects/1/donate">Click here to help us &raquo;</a>
       </p>
 
     </div>

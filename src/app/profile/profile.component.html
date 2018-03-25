@@ -1,0 +1,148 @@
+<!-- {{showModalBool}} -->
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+
+    <!-- Left Column -->
+    <div class="w3-third">
+
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="assets/pictures/profile-picture.jpg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black profile-text">
+            <h2>Rebekka Haley</h2>
+          </div>
+        </div>
+        <div class="w3-container" id="profileData">
+          <br>
+          <p><img src="assets/icons/icon-occupation.png">Student</p>
+          <p><img src="assets/icons/icon-location.png">Bangkok, Thailand</p>
+          <p><img src="assets/icons/icon-karma.png">100pt</p>
+          <p><img src="assets/icons/icon-streak.png">10 STREAK!</p>
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right"></i>Contribution</b></p>
+          <p>Volunteer</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge" style="width:90%">90%</div>
+          </div>
+          <p>Donation</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge" style="width:80%">80%</div>
+          </div>
+          <p>Child Care</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge" style="width:75%">75%</div>
+          </div>
+          <p>Environment</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge" style="width:50%">50%</div>
+          </div>
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right"></i>Languages</b></p>
+          <p>English</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge" style="height:24px;width:100%"></div>
+          </div>
+          <p>Thai</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge" style="height:24px;width:55%"></div>
+          </div>
+          <p>Mandarin</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge" style="height:24px;width:25%"></div>
+          </div>
+          <br>
+        </div>
+      </div><br>
+
+      <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge"></i>Memories</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Open Kitchen</b></h5>
+          <h6 class=""><i class="fa fa-calendar fa-fw w3-margin-right"></i>21th Jan 2018</h6>
+          <p>Join us in an one day cooking event, where you meet others volunteer to help cooking for those in need! <br/>Our team prepared 10 cooking station for everyone to use! Anyone can join help to volunteer! Can't cook? no problem! Help serve the foods or bring ingredients to the cooks! every healp counts!</p>
+          <!--           <h6>My Rating: <img src="assets/https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpHLwt6sjLCiJMh7J-3yz3-Um3tWE_lWyw3lLGGVKfukbsC84p" style="width: 100px"> </h6> -->
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Gregory Park Rehabilitation</b></h5>
+          <h6 class=""><i class="fa fa-calendar fa-fw w3-margin-right"></i>14th Jan 2018</h6>
+          <p>Join us on cleaning and planting new trees in Gregory Park!<br/>Gregory park is our one and only most loved park in south London, It's been a while since it was cleaned and the plants are growing un-maintained! It's our chance to make Gregory park GREAT AGAIN!</p>
+          <!--           <h6>My Rating: <img src="assets/https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpHLwt6sjLCiJMh7J-3yz3-Um3tWE_lWyw3lLGGVKfukbsC84p" style="width: 100px"> </h6> -->
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Code & Care</b></h5>
+          <h6 class=""><i class="fa fa-calendar fa-fw w3-margin-right"></i>8th Jan 2018</h6>
+          <p>Teach basic codings to childrens in Hunter & Gwent Foster home!</p>
+          <!--           <h6>My Rating: <img src="assets/https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpHLwt6sjLCiJMh7J-3yz3-Um3tWE_lWyw3lLGGVKfukbsC84p" style="width: 100px"> </h6> -->
+          <hr>
+        </div>
+      </div>
+
+    <div class="w3-container w3-card w3-white">
+      <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Achievements</h2>
+      <div class="container"v id="badgeContainer">
+        <img src="assets/icons/icon-badge.png" height="512" width="512"/>
+        <img src="assets/icons/icon-badge2.png" height="512" width="512"/>
+        <img src="assets/icons/icon-badge3.png" height="512" width="512"/>
+        <!-- need a modal -->
+        <img id="badgeImage" src="assets/icons/icon-badge4.png" height="512" width="512"
+          (click)="showModal()"
+        />
+        <img src="assets/icons/icon-badge5.png" height="512" width="512"/>
+      </div>
+      <br>
+      <br>
+      <!-- The Modal -->
+      <div id="myModal" class="modal" *ngIf="showModalBool">
+
+        <!-- Modal content -->
+        <div class="modal-content" (clickOutside)="hideModal($event)">
+          <span class="close" (click)="hideModal()">&times;</span>
+          <img src="assets/achievement.png" alt="" class="img-responsive">
+        </div>
+      </div>
+
+      <!-- <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var badgeImage = document.getElementById("badgeImage");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        badgeImage.onclick = function() {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script> -->
+    </div>
+
+    <!-- End Page Container -->
+  </div>

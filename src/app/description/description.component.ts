@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Router, ActivatedRoute, Params} from '@angular/router';
+import {OnInit, Component} from '@angular/core';
 
 @Component({
   selector: 'app-description',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DescriptionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) {}
+
+  showThanks = false;
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe((params: Params) => {
+      let param = params['param'];
+      if (param == 'thanks') {
+        this.showThanks = true;
+      }
+
+    })
   }
 
 }
