@@ -40,6 +40,30 @@ export class SignupComponent implements OnInit {
     this.showSignUp = !this.showSignUp;
   }
 
+  submitSignUp() {
+    this.newUser();
+  }
+
+  submitSignIn() {
+    this.signIn();
+  }
+
+  // keyDownSignUp(event) {
+  //   if(event.keyCode == 13) {
+  //       // alert('you just clicked enter');
+  //       newUser();
+  //       // rest of your code
+  //     }
+  // }
+  //
+  // keyDownSignIn(event) {
+  //   if(event.keyCode == 13) {
+  //     // alert('you just clicked enter');
+  //     signIn();
+  //     // rest of your code
+  //   }
+  // }
+
   signIn() {
     if (this.model.email) {
       this.usersService.signIn(this.model.email, "")
