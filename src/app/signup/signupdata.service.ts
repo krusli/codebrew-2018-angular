@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject }    from 'rxjs/Subject';
+import { User }       from '../users/User';
 
 @Injectable()
 export class DataService {
@@ -9,7 +10,7 @@ export class DataService {
         return this.dataObs$;
     }
 
-    updateData(data: any) {
+    updateData(data: User) {
         console.log('updateData');
         this.dataObs$.next(data);
     }
