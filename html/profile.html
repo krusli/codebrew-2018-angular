@@ -9,7 +9,50 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="profile.css">
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+   body {font-family: Arial, Helvetica, sans-serif;}
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
 </style>
 <body class="w3-light-grey">
 
@@ -104,31 +147,55 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           </div>
         </div>
 
-        <div class="w3-container w3-card w3-white">
-          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge"></i>Achievements</h2>
-          <div class="badges">
-            <div class="container" id="badgeContainer">
-              <img src="icons/icon-badge.png" height="512" width="512"/>
-              <img src="icons/icon-badge2.png" height="512" width="512"/>
-              <img src="icons/icon-badge3.png" height="512" width="512"/>
-              <img src="icons/icon-badge4.png" height="512" width="512"/>
-              <img src="icons/icon-badge5.png" height="512" width="512"/>
-            </div>
-            <br>
-            <br>
-<!--             <div class="w3-container">
-              <h5 class="w3-opacity"><b>UCL</b></h5>
-              <h6 class=""><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - Ongoing</h6>
-              <p>MSc. Bioinformatics</p>
-              <hr>
-            </div>
-            <div class="w3-container">
-              <h5 class="w3-opacity"><b>University of Bangkok</b></h5>
-              <h6 class=""><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014 - 2017</h6>
-              <p>BSc. Biology</p><br>
-            </div> -->
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Achievements</h2>
+        <div class="container"v id="badgeContainer">
+          <img src="icons/icon-badge.png" height="512" width="512"/>
+          <img src="icons/icon-badge2.png" height="512" width="512"/>
+          <img src="icons/icon-badge3.png" height="512" width="512"/>
+          <!-- need a modal -->
+          <img id="badgeImage" src="icons/icon-badge4.png" height="512" width="512"/>
+          <img src="icons/icon-badge5.png" height="512" width="512"/>
+        </div>
+        <br>
+        <br>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="../src/assets/achievement.png" alt="">
           </div>
         </div>
+
+        <script>
+          // Get the modal
+          var modal = document.getElementById('myModal');
+
+          // Get the button that opens the modal
+          var badgeImage = document.getElementById("badgeImage");
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+          // When the user clicks the button, open the modal
+          badgeImage.onclick = function() {
+            modal.style.display = "block";
+          }
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+            modal.style.display = "none";
+          }
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+        </script>
       </div>
 
       <!-- End Page Container -->

@@ -2,7 +2,8 @@
   <tr>
     <td *ngFor="let project of projects">
       <div class="card" style="width: 25rem;" >
-          <img class="card-img-top" [src]="'assets/' + project.photo">
+          <div class="card-img-top center-cropped"
+            [style.background-image]="'url(assets/' + project.photo + ')'"></div>
           <div class="card-body">
             <h5 class="card-title">{{project.name}} <br> ({{project.location}})</h5>
             <p class="card-text">{{project.description}}</p>
@@ -15,10 +16,24 @@
           <hr>
 
           <div class="badges">
-              <span class="badge badge-pill badge-info">volunteer</span>
-              <span class="badge badge-pill badge-success">teaching</span>
-              <span class="badge badge-secondary">asian</span>
-              <span class="badge badge-secondary">phillipines</span>
+            <span *ngFor="let tag of project.tags; let isOdd=odd; let isEven=even;"
+              [class.badge]=true
+              [class.badge-pill]=true
+              [class.badge-info]=isOdd
+              [class.badge-success]=isEven
+              >
+              {{tag}}
+            </span>
+
+            <span *ngFor="let tag of project.countrytags" class="badge badge-secondary">
+              {{tag}}
+            </span>
+
+
+              <!-- <span class="badge badge-pill badge-info">volunteer</span>
+              <span class="badge badge-pill badge-success">teaching</span> -->
+              <!-- <span class="badge badge-secondary">asian</span>
+              <span class="badge badge-secondary">phillipines</span> -->
           </div>
       </div>
     </td>
