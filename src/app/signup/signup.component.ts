@@ -29,6 +29,9 @@ export class SignupComponent implements OnInit {
     if (this.model.firstName && this.model.lastName && this.model.email)
       this.usersService.newUser(this.model)
       .subscribe(user => {
+        this.dataService.updateData(user);
+        this.router.navigate(['./']);
+
         this.model = new User("", "", "", ""); // TODO remove. Clears the form
       })
   }
@@ -41,7 +44,7 @@ export class SignupComponent implements OnInit {
     if (this.model.email) {
       this.usersService.signIn(this.model.email, "")
       .subscribe(obj => {
-        console.log(obj);
+        // console.log(obj);
 
         this.dataService.updateData(obj);
         this.router.navigate(['./']);
