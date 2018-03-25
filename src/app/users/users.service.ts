@@ -6,6 +6,8 @@ import { Observable } from 'rxjs/Observable';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import { catchError, retry } from 'rxjs/operators';
 
+import { DataService } from '../signup/signupdata.service';
+
 // export interface User {
 //   firstName: string,
 //   lastName: string
@@ -37,7 +39,7 @@ const httpOptions = {
 export class UsersService {
   url = 'http://codebrew-2018.herokuapp.com/users';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private dataService: DataService) {}
 
   getUsers() {
     return this.http.get<Array<User>>(this.url)

@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 import { User } from '../users/User';
 import { UsersService } from '../users/users.service';
+import { DataService } from '../signup/signupdata.service';
 
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +18,9 @@ export class SignupComponent implements OnInit {
   model = new User("", "", "", "");
   showSignUp: boolean = true;
 
-  constructor(private usersService: UsersService, private router: Router) { }
+  constructor(private usersService: UsersService,
+    private dataService: DataService,
+    private router: Router) { }
 
   ngOnInit() {
   }
@@ -37,8 +41,9 @@ export class SignupComponent implements OnInit {
     if (this.model.email) {
       this.usersService.signIn(this.model.email, "")
       .subscribe(obj => {
-        console.log(obj.id);
+        console.log(obj);
 
+        this.dataService.updateData(obj);
         this.router.navigate(['./']);
 
       });  // TODO no password

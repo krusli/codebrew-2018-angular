@@ -12,6 +12,8 @@ import { SignupComponent } from './signup/signup.component';
 import { DescriptionComponent } from './description/description.component';
 import { HomeComponent } from './home/home.component';
 
+import { DataService } from './signup/signupdata.service';
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'heroes', component: HeroesComponent },
@@ -37,7 +39,9 @@ const appRoutes: Routes = [
      { enableTracing: true } // <-- debugging purposes only
    )
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
