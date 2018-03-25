@@ -2,3 +2,13 @@
   background-color: rgba(255,255,255, 0.7);
   width: auto;
 }
+
+#profileData img{
+  width: 23.141px;
+  height: 18px;
+  margin-right: 16px;
+}
+
+#firstProfileData {
+  margin-top: 15px;
+}
