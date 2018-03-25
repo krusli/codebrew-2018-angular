@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 
 import { DataService } from './signup/signupdata.service';
 import { CardsComponent } from './cards/cards.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
   { path: 'signup', component: SignupComponent },  // TODO
   { path: 'projects', component: CardsComponent },
   { path: 'projects/1', component: DescriptionComponent },
+  { path: 'projects/:projectID/payment', component: PaymentComponent },
   { path: '**', component: PageNotFoundComponent }
 ]
 
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     DescriptionComponent,
     HomeComponent,
-    CardsComponent
+    CardsComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
