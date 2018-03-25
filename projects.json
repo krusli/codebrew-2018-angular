@@ -1,0 +1,27 @@
+[{
+    name: "Volunteering at a rice farm",
+    location: "Mekong Delta, Vietnam",
+    desciption: "Help out local farmers during the harvest season."
+},
+{
+    name: "Donation for tetanus vaccines",
+    location: "Laos",
+    desciption: "Donate to our vaccine program for school kids and safeguard their health."
+},
+{
+    name: "Donate to the Global Fund for Education",
+    location: "Municipality of Dinalupihan, Philippines",
+    desciption: "The Global Education Fund is committed to helping children see possibilities beyond their experience every day. Make an impact in their lives.",
+    sponsor: "Global Education Fund"
+},
+{
+    name: "Funding for Medical Device at Buriram Hospital",
+    location: "Buriram, Thailand",
+    desciption: "Our patients are in need of access to better medical facilities. Please help us in the increasing demands on our Hospital."
+},
+{
+    name: "Donate to Sri Lanka Safe Water Project",
+    location: "Sri Lanka",
+    desciption: "Improve water condition for local communities by funding water filters.",
+    sponsor: "Foundation of Goodness"
+}]
