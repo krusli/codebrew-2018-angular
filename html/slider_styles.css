@@ -1,5 +1,14 @@
 .card{
-    margin: 0 auto;
+    margin: 10px;
+}
+
+td:nth-child(2n) .card{
+  background-color: #f9f9f9;
+  margin: 10px 0px;
+}
+
+td:nth-child(2n-1) .card{
+  background-color: #e5e5e5;
 }
 
 .card-body{
