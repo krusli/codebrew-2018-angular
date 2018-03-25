@@ -17,6 +17,10 @@ export class AppComponent {
   constructor(private dataService: DataService,
     private router: Router) {}
 
+  signOut() {
+    this.data = new User("", "", "", "");
+  }
+
   ngOnInit() {
     this.dataService.getData().subscribe(data => {
       this.data = data;

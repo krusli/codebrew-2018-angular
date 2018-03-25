@@ -30,7 +30,11 @@ true}">Home</a>
       </li>
 
       <li class="nav-item active" *ngIf=data.firstName>
-        <a class="nav-link">{{data.firstName}}</a>
+        <a class="nav-link" routerLink="/profile">{{data.firstName}}</a>
+      </li>
+
+      <li class="nav-item active" *ngIf=data.firstName>
+        <a class="nav-link" (click)="signOut()">Sign Out</a>
       </li>
     </ul>
 
