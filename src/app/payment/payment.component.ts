@@ -21,7 +21,7 @@ export class PaymentComponent implements OnInit {
   }
 
   donate() {
-      this.router.navigate(['./projects/1/thanks']
+      this.router.navigate(['./projects/1/thanks']);
   }
 
   constructor(private router: Router) { }
