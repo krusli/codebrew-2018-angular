@@ -48,6 +48,14 @@ export class CardsComponent implements OnInit {
       "photo": "cleanWater.jpg",
       "tags": ["health", "sanitation", "donation"],
       "countrytags": ["sri lanka"]
+  },
+  {
+      "name": "Volunteer at repairing Ayutthaya temple",
+      "location": "Thailand",
+      "description": "",
+      "sponsor": "",
+      "tags": ["community", "volunteer"],
+      "countrytags": ["thailand"]
   }];
 
 
